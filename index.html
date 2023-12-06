@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Issue Tracker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        label, select, textarea {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <form id="issueForm">
+        <label for="criticality">Criticality:</label>
+        <select id="criticality" name="criticality">
+            <option value="high">High</option>
+            <option value="medium">Medium</option>
+            <option value="low">Low</option>
+            <option value="info">Informational</option>
+            <option value="urgent">Urgent</option>
+        </select>
+
+        <label for="type">Type:</label>
+        <select id="type" name="type">
+            <option value="bug">Bug</option>
+            <option value="feature">Feature</option>
+            <option value="enhancement">Enhancement</option>
+        </select>
+
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" rows="4" cols="50"></textarea>
+
+        <label for="material">Material:</label>
+        <select id="material" name="material">
+            <option value="metal">Metal</option>
+            <option value="plastic">Plastic</option>
+            <option value="wood">Wood</option>
+            <option value="glass">Glass</option>
+            <option value="other">Other</option>
+        </select>
+
+        <button type="button" onclick="saveIssue()">Save</button>
+    </form>
+
+    <script>
+        function saveIssue() {
+            // You can add code here to handle the form submission, for example, using AJAX to send data to the server.
+            alert('Issue saved!');
+        }
+    </script>
+
+</body>
+</html>
